@@ -1,0 +1,22 @@
+version: '3'
+services:
+  samba:
+    build: ./services/docker-alpine-samba-dc
+    environment:
+      - SAMBA_DC_REALM=klopf.cz
+      - SAMBA_DC_DOMAIN=klopf
+      - SAMBA_DC_ADMIN_PASSWD=Clarn123
+      - SAMBA_DC_DNS_BACKEND=SAMBA_INTERNAL
+    ports:
+      - 5000:5000
+      - 53:53
+      - 135:135
+      - 137:137
+      - 138:138
+      - 139:139
+      - 389:389
+      - 445:445
+      - 464:464
+      - 636:636
+    volumes:
+      - ./data/samba:/samba
