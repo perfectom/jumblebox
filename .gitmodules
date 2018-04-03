@@ -1,3 +1,0 @@
-[submodule "services/docker-alpine-samba-dc"]
-	path = services/docker-alpine-samba-dc
-	url = https://github.com/perfectom/docker-alpine-samba-dc.git
